@@ -235,6 +235,8 @@ jobs:
     name: Add Build Artifacts to Release
     needs: [release_please, github_build, packslip]
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
       - name: Setup | Artifacts
         uses: actions/download-artifact@9000827ccba6bdab643e8b6fd33ac0654aef8333 # v8.0.2
